@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        .cam {
+          position: relative;
+          overflow: hidden;
+          width: 94%;
+          padding-top: 56.25%; 
+          padding-left: 3%;
+          padding-right: 3%;
+        }
+        
+        .cam img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          frameborder: none;
+        }  
+        
+        .flex-grid {
+          display: flex;
+        }
+        .col {
+          flex: 1;
+        }
+        
+        .cams img {
+          width:440px;
+          height:225px;
+        }
+        
+        @media (max-width: 800px) {
+          .flex-grid {
+            display: block;
+            text-align: center;
+          }
+        }
+        
+        .schedule {
+          margin: 1%;
+        }
+        
+        table  {
+          margin-left: 0;
+            margin-right: 0;
+            margin-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 0;
+            margin-bottom: 1.45rem;
+            font-size: 1rem;
+            line-height: 1.45rem;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        table, tr, td {
+            border: 1px solid black;
+        }
+        
+        thead th{
+          background-color:#337d94;
+        }
+        </style>
+        
+        <div class="flex-grid">
+        
+          <div class="col">
+        
+              <div class="cams">
+                <h2>A Yard: Camera #1</h2>
+                <div class="content"> 
+                  <img class="stream" src=" http://173.14.218.66:8081/mjpg/video.mjpg">
+                  </div>
+              </div>
+        
+              <div class="cams">
+                <h2>A Yard: Camera #2</h2>
+                <div class="content">
+                  <img id="stream" src=" http://173.14.218.66:8082/mjpg/video.mjpg">
+                  </div>
+              </div>
+        
+        </div>
+         <div class="col">
+        
+               <div class="cams" id="cam-s">
+            <h2>S Yard</h2>
+              <div class="content">
+                <img class="stream" src=" http://173.14.218.66:8079/mjpg/video.mjpg">
+                </div>
+              </div>
+        
+              <div class="cams" id=cam-B>
+                <h2>B Yard</h2>
+                <div class="content"><img class="stream" src=" http://173.14.218.66:8083/mjpg/video.mjpg">
+                </div>
+              </div>
+        
+          </div>
+        
+        </div>
+        
+        <div class="flex-grid">
+          <div class="col">
+                <h3>Rotation Schedule</h3>
+          </div></div>
+        
+          <div class="flex-grid section" id="rotation-schedule">
+        
+              <br>
+            <div class="clear"></div>
+            <div class="col">
+                <div class="schedule">
+                  <table id="tablepress-16" class="tablepress tablepress-id-16">
+                    <thead>
+                      <tr class="row-1 odd">
+                        <th class="column-1">Time</th>
+                        <th class="column-2">Monday-Thursday</th>
+                      </tr>
+                    </thead>
+                    <tbody class="row-hover">
+                      <tr class="row-2 even">
+                        <td class="column-1">8:00 AM-9:45 AM</td>
+                        <td class="column-2">Groups 3, 4 and 5 playing</td>
+                      </tr>
+                      <tr class="row-3 odd">
+                        <td class="column-1">9:45 AM</td>
+                        <td class="column-2">Groups are being rotated</td>
+                      </tr>
+                      <tr class="row-4 even">
+                        <td class="column-1">10:00 AM - 11:45 AM</td>
+                        <td class="column-2">Groups 1, 2 and 6 playing</td>
+                      </tr>
+                      <tr class="row-5 odd">
+                        <td class="column-1">11:45 AM</td>
+                        <td class="column-2">Groups are being rotated</td>
+                      </tr>
+                      <tr class="row-6 even">
+                        <td class="column-1">12:00 PM- 1:45 PM </td>
+                        <td class="column-2">Groups 3, 4 and 5 playing </td>
+                      </tr>
+                      <tr class="row-7 odd">
+                        <td class="column-1">1:45 PM </td>
+                        <td class="column-2">Groups are bing rotated </td>
+                      </tr>
+                      <tr class="row-8 even">
+                        <td class="column-1">2:00 PM- 3:45 PM </td>
+                        <td class="column-2">Groups 1, 2 and 6 playing</td>
+                      </tr>
+                      <tr class="row-9 odd">
+                        <td class="column-1">3:00PM</td>
+                        <td class="column-2">Boarding dogs pulled from yards</td>
+                      </tr>
+                      <tr class="row-10 even">
+                        <td class="column-1">3:45 PM</td>
+                        <td class="column-2">Groups collapse into S Yard and A Yard</td>
+                      </tr>
+                    </tbody>
+                  </table>
+        
+                </div>
+              </div>
+        
+              <div class="col">
+                <div class="schedule">
+                  <table id="schedule-friday" >
+                    <thead>
+                      <tr class="row-1 odd">
+                        <th class="column-1">Time</th>
+                        <th class="column-2">Friday</th>
+                      </tr>
+                    </thead>
+                    <tbody class="row-hover">
+                      <tr class="row-2 even">
+                        <td class="column-1">8:00 AM- 9:45 AM </td>
+                        <td class="column-2">Groups 3, 4 and 5 playing </td>
+                      </tr>
+                      <tr class="row-3 odd">
+                        <td class="column-1">9:45 AM </td>
+                        <td class="column-2">Groups are being rotated </td>
+                      </tr>
+                      <tr class="row-4 even">
+                        <td class="column-1">10:00 AM- 10:45 AM </td>
+                        <td class="column-2">Groups 1. 2 and 6 playing</td>
+                      </tr>
+                      <tr class="row-5 odd">
+                        <td class="column-1">11:45 AM</td>
+                        <td class="column-2">Groups collapse into A Yard and B or S Yard (depending on volume)</td>
+                      </tr>
+                    </tbody>
+        
+                    <thead>
+                      <tr class="row-1 odd">
+                        <th class="column-1">Time</th>
+                        <th class="column-2">Saturday &amp; Sunday</th>
+                      </tr>
+                    </thead>
+                    <tbody class="row-hover">
+                      <tr class="row-2 even">
+                        <td class="column-1">All day</td>
+                        <td class="column-2">Large dogs in A Yard</td>
+                      </tr>
+                      <tr class="row-3 odd">
+                        <td class="column-1">All day</td>
+                        <td class="column-2">Small dogs in B or S Yard</td>
+                      </tr>
+                    </tbody>
+                  </table>
+        
+                </div>
+              </div>
+        
+            </div>
+        
+            <div class="flex-grid">
+        
+                <div class="x-text">
+                  <p><em>* Rotation schedules may alter based on the needs of the facility and the safety of our dogs.</em></p>
+                </div>
+              </div>
+            </div>
+</body>
+</html>
